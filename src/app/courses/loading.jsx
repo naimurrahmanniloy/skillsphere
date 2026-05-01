@@ -3,7 +3,7 @@ import { Puff } from "react-loader-spinner";
 export default function Loading() {
   // Or a custom loading skeleton component
   return (
-    <p className="text-center mx-auto">
+    <div className="text-center mx-auto">
       <Puff
         visible={true}
         height="80"
@@ -13,6 +13,6 @@ export default function Loading() {
         wrapperStyle={{}}
         wrapperClass=""
       />
-    </p>
+    </div>
   );
 }
