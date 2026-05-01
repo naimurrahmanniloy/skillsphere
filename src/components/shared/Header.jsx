@@ -7,7 +7,7 @@ import { CirclePlay } from "@gravity-ui/icons";
 const Header = () => {
   return (
     <div className="bg-[#F9F9FF]">
-      <div className="hero min-h-screen">
+      <div className="hero min-h-170">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <Image
             src={heroImg}
@@ -16,11 +16,14 @@ const Header = () => {
           />
 
           <div>
+            <div className="badge bg-[#E8DEFF] text-[#632CE5] rounded-lg">
+              THE DIGITAL CURATOR
+            </div>
             <h1 className="text-8xl font-bold height-[1.2em]">
               Upgrade Your{" "}
-              <span className="italic text-[#005BC5]">Skills Today 🚀</span>
+              <span className="italic text-[#005BC5]">Skills Today🚀</span>
             </h1>
-            <p className="py-6 text-[20px] text-gray-600">
+            <p className="py-6 text-[24px] text-gray-600">
               Step into a high-end gallery of knowledge. Learn <br /> from
               industry experts curated for professional excellence.
             </p>

@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "Sarah Jenkins",
+    "motivation_word": "Building the web means building the future. Let's write code that matters!",
+    "enrolled_numbers": 12500,
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch, mastering everything from basic tags to complex architectures.",
+    "course_curriculum": [
+      "HTML5 & CSS3 Foundations",
+      "JavaScript DOM Manipulation",
+      "React.js Front-End Framework"
+    ],
+    "image": "https://i.postimg.cc/example-course1.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced CSS & Responsive Layouts",
+    "instructor": "Markus Vance",
+    "motivation_word": "Don't let elements push you around. Take absolute control of your layout and build flawlessly responsive designs.",
+    "enrolled_numbers": 8430,
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master Flexbox, Grid, and fixed positioning to create pixel-perfect, responsive websites.",
+    "course_curriculum": [
+      "Mastering Flexbox and CSS Grid",
+      "Advanced Positioning (Fixed, Sticky, Absolute)",
+      "Responsive Media Queries and Breakpoints"
+    ],
+    "image": "https://i.postimg.cc/example-course2.png",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "Cinematic Image Manipulation & Retouching",
+    "instructor": "Elena Rostova",
+    "motivation_word": "Turn ordinary shots into cinematic masterpieces. Your vision is your only limit.",
+    "enrolled_numbers": 15200,
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Learn professional photo editing, including complex head swaps, color grading for urban nighttime aesthetics, and lighting adjustments.",
+    "course_curriculum": [
+      "Advanced Masking & Compositing",
+      "Cinematic Color Grading & Neon Lighting",
+      "AI-Powered Retouching & Wardrobe Swaps"
+    ],
+    "image": "https://i.postimg.cc/example-course3.png",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Data Science with Python",
+    "instructor": "Dr. Alan Turing",
+    "motivation_word": "Data holds the secrets of the universe; Python is the key to unlock them.",
+    "enrolled_numbers": 24000,
+    "duration": "35 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Dive into data analysis, visualization, and basic machine learning algorithms using Python.",
+    "course_curriculum": [
+      "Python Syntax & Data Structures",
+      "Data Analysis with Pandas",
+      "Introduction to Machine Learning"
+    ],
+    "image": "https://i.postimg.cc/example-course4.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 5,
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Emma Watson",
+    "motivation_word": "Don't just reach an audience, build a community that believes in your message.",
+    "enrolled_numbers": 9500,
+    "duration": "15 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Grow your business online using SEO, social media strategies, and email campaigns.",
+    "course_curriculum": [
+      "Search Engine Optimization (SEO) Basics",
+      "Social Media Growth Strategy",
+      "High-Converting Email Campaigns"
+    ],
+    "image": "https://i.postimg.cc/example-course5.png",
+    "category": "Marketing"
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Development with Flutter",
+    "instructor": "Carlos Mendez",
+    "motivation_word": "Bring your biggest ideas to life, one screen at a time.",
+    "enrolled_numbers": 11100,
+    "duration": "25 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
+    "course_curriculum": [
+      "Dart Programming Language",
+      "Building UIs with Flutter Widgets",
+      "State Management and API Integration"
+    ],
+    "image": "https://i.postimg.cc/example-course6.png",
+    "category": "Development"
+  },
+  {
+    "id": 7,
+    "title": "UI/UX Design Principles",
+    "instructor": "Fiona Gallagher",
+    "motivation_word": "Design isn't just how it looks, it's how it works and feels for the user.",
+    "enrolled_numbers": 18300,
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn the fundamentals of user experience and interface design using industry-standard tools like Figma.",
+    "course_curriculum": [
+      "User Research & Wireframing",
+      "High-Fidelity Prototyping in Figma",
+      "Usability Testing & Feedback"
+    ],
+    "image": "https://i.postimg.cc/example-course7.png",
+    "category": "Design"
+  },
+  {
+    "id": 8,
+    "title": "Cloud Computing on AWS",
+    "instructor": "David Chen",
+    "motivation_word": "The sky is not the limit; the cloud is where we begin to scale.",
+    "enrolled_numbers": 6700,
+    "duration": "22 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Prepare for the AWS Solutions Architect exam by mastering cloud infrastructure and deployment.",
+    "course_curriculum": [
+      "AWS Core Services (EC2, S3, RDS)",
+      "Serverless Architecture & Lambda",
+      "Security and Access Management (IAM)"
+    ],
+    "image": "https://i.postimg.cc/example-course8.png",
+    "category": "IT & Software"
+  },
+  {
+    "id": 9,
+    "title": "Cyber Security Fundamentals",
+    "instructor": "Alice Hacker",
+    "motivation_word": "Defense is the best offense in the modern digital age. Learn to protect what matters.",
+    "enrolled_numbers": 5400,
+    "duration": "16 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Understand the basics of network security, ethical hacking, and how to defend against modern cyber threats.",
+    "course_curriculum": [
+      "Network Security Architecture",
+      "Introduction to Ethical Hacking",
+      "Cryptography & Data Protection"
+    ],
+    "image": "https://i.postimg.cc/example-course9.png",
+    "category": "IT & Software"
+  }
+]
