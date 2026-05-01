@@ -1,9 +1,18 @@
+"use client";
+
+import { authClient } from "@/lib/auth-client";
 import { ArrowRightToSquare } from "@gravity-ui/icons";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData?.data?.user;
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  };
   const links = (
     <div className="flex flex-col lg:flex-row gap-4 text-[#005BC5] font-medium">
       <li>
@@ -52,15 +61,34 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-5 ">
-          <Link href={"/signin"}>
-            <Button variant="none" className="text-[16px]" color="primary">
-              <ArrowRightToSquare className="h-5 w-5" />
-              Login
-            </Button>
-          </Link>
-          <Link href={"/signup"}>
-            <Button className="bg-[#005BC5] text-[16px]">Register</Button>
-          </Link>
+          {!user && (
+            <div className="flex">
+              <Link href={"/signin"}>
+                <Button variant="none" className="text-[16px]" color="primary">
+                  <ArrowRightToSquare className="h-5 w-5" />
+                  Login
+                </Button>
+              </Link>
+              <Link href={"/signup"}>
+                <Button className="bg-[#005BC5] text-[16px]">Register</Button>
+              </Link>
+            </div>
+          )}
+          {user && (
+            <div className="flex gap-4 items-center">
+              <Avatar>
+                <Avatar.Image
+                  alt="John Doe"
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+              </Avatar>
+              <Button onClick={handleSignOut} size="sm" variant="danger">
+                SignOut
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
