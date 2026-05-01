@@ -9,7 +9,7 @@ const Popular = async () => {
   return (
     <div className=" bg-[#F2F3FC] pt-32 min-h-200">
       <div className="max-w-7xl mx-auto  ">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
             <h1 className="text-4xl">Popular Knowledge Paths</h1>
             <p className="text-[#424753] mt-2">
@@ -17,12 +17,12 @@ const Popular = async () => {
             </p>
           </div>
           <div>
-            <p className="flex items-center gap-1">
+            <p className="flex items-center gap-1 md:mt-4">
               View All <ArrowRight />
             </p>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-8 ">
+        <div className="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ">
           {data.slice(0, 3).map((course) => {
             return <CourseCard key={course.id} course={course} />;
           })}

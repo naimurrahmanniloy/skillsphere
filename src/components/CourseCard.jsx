@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const CourseCard = ({ course }) => {
@@ -5,11 +6,13 @@ const CourseCard = ({ course }) => {
     <div className="w-full max-w-85 flex flex-col h-full rounded-[1.5rem] bg-white border border-gray-100 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.05)] overflow-hidden font-sans">
       {/* Image Header */}
       <div className="relative h-55 w-full bg-slate-800">
-        {/* <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop"
-          alt="Course graphic"
+        <Image
+          src={course.image}
+          alt={course.title}
           className="w-full h-full object-cover opacity-90"
-        /> */}
+          width={600}
+          height={300}
+        />
         {/* Category Badge */}
         <div
           className={`absolute top-4 left-4  text-[11px] font-bold px-2.5 py-1 rounded-sm shadow-sm ${course.category === "Development" ? "bg-[#69FF87] text-[#00541E]" : ""} ${course.category === "Marketing" ? "bg-[#FFEDD5] text-[#C2410C]" : ""} ${course.category === "Design" ? "bg-[#E8DEFF] text-[#6B21A8]" : ""} ${course.category === "IT & Software" ? "bg-[#E8DEFF] text-[#6B21A8]" : ""} ${course.category === "Data Science" ? "bg-[#E8DEFF] text-[#6B21A8]" : ""}`}
