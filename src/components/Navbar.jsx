@@ -52,11 +52,15 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-5 ">
-          <Button variant="none" className="text-[16px]" color="primary">
-            <ArrowRightToSquare className="h-5 w-5" />
-            Login
-          </Button>
-          <Button className="bg-[#005BC5] text-[16px]">Register</Button>
+          <Link href={"/signin"}>
+            <Button variant="none" className="text-[16px]" color="primary">
+              <ArrowRightToSquare className="h-5 w-5" />
+              Login
+            </Button>
+          </Link>
+          <Link href={"/signup"}>
+            <Button className="bg-[#005BC5] text-[16px]">Register</Button>
+          </Link>
         </div>
       </div>
     </div>
