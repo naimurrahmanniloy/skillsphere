@@ -1,3 +1,5 @@
+import { ArrowRightToSquare } from "@gravity-ui/icons";
+import { Button } from "@heroui/react";
 import Link from "next/link";
 import React from "react";
 
@@ -49,8 +51,12 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-5 ">
+          <Button variant="none" className="text-[16px]" color="primary">
+            <ArrowRightToSquare className="text-lg" />
+            Login
+          </Button>
+          <Button className="bg-[#005BC5] text-[16px]">Register</Button>
         </div>
       </div>
     </div>
