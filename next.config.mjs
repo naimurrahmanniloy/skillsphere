@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com", "randomuser.me"],
   },
+
   reactCompiler: true,
 };
 
