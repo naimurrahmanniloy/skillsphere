@@ -1,0 +1,35 @@
+import { ArrowRight } from "@gravity-ui/icons";
+import CourseCard from "../CourseCard";
+
+const Popular = async () => {
+  const res = await fetch("https://skillsphere-nu.vercel.app/data.json");
+  const data = await res.json();
+  console.log(data);
+
+  return (
+    <div className=" bg-[#F2F3FC] pt-32 min-h-200">
+      <div className="max-w-7xl mx-auto  ">
+        <div className="flex justify-between items-center">
+          <div>
+            <h1 className="text-4xl">Popular Knowledge Paths</h1>
+            <p className="text-[#424753] mt-2">
+              The most sought-after expertise this season.
+            </p>
+          </div>
+          <div>
+            <p className="flex items-center gap-1">
+              View All <ArrowRight />
+            </p>
+          </div>
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-8 ">
+          {data.slice(0, 3).map((course) => {
+            return <CourseCard key={course.id} course={course} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Popular;
