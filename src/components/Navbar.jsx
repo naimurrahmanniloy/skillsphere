@@ -16,7 +16,7 @@ const Navbar = () => {
     </div>
   );
   return (
-    <div className="container mx-auto">
+    <div>
       <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
