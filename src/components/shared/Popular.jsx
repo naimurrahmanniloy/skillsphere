@@ -1,5 +1,6 @@
 import { ArrowRight } from "@gravity-ui/icons";
 import CourseCard from "../CourseCard";
+import Link from "next/link";
 
 const Popular = async () => {
   const res = await fetch("https://skillsphere-nu.vercel.app/data.json");
@@ -17,9 +18,11 @@ const Popular = async () => {
             </p>
           </div>
           <div>
-            <p className="flex items-center gap-1 md:mt-4">
-              View All <ArrowRight />
-            </p>
+            <Link href={`/courses`}>
+              <button className="flex items-center gap-1 md:mt-4 cursor-pointer text-[#005BC5]">
+                View All <ArrowRight />
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ">

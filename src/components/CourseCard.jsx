@@ -4,7 +4,6 @@ import React from "react";
 const CourseCard = ({ course }) => {
   return (
     <div className="w-full max-w-85 flex flex-col h-full rounded-[1.5rem] bg-white border border-gray-100 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.05)] overflow-hidden font-sans">
-      {/* Image Header */}
       <div className="relative h-55 w-full bg-slate-800">
         <Image
           src={course.image}
@@ -13,7 +12,7 @@ const CourseCard = ({ course }) => {
           width={600}
           height={300}
         />
-        {/* Category Badge */}
+
         <div
           className={`absolute top-4 left-4  text-[11px] font-bold px-2.5 py-1 rounded-sm shadow-sm ${course.category === "Development" ? "bg-[#69FF87] text-[#00541E]" : ""} ${course.category === "Marketing" ? "bg-[#FFEDD5] text-[#C2410C]" : ""} ${course.category === "Design" ? "bg-[#E8DEFF] text-[#6B21A8]" : ""} ${course.category === "IT & Software" ? "bg-[#E8DEFF] text-[#6B21A8]" : ""} ${course.category === "Data Science" ? "bg-[#E8DEFF] text-[#6B21A8]" : ""}`}
         >
@@ -21,7 +20,6 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
 
-      {/* Card Body */}
       <div className="p-5  flex-1 flex flex-col">
         <h2 className="text-[22px] leading-tight text-gray-900 font-medium mb-2 mt-1">
           {course.title}
@@ -30,9 +28,7 @@ const CourseCard = ({ course }) => {
           {course.description}
         </p>
 
-        {/* Author and Rating Row */}
         <div className="mt-auto">
-          {/* Author and Rating Row */}
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-3">
               <Image
@@ -55,7 +51,6 @@ const CourseCard = ({ course }) => {
             </div>
           </div>
 
-          {/* Action Button */}
           <button className="w-full bg-[#EAEAF2] hover:bg-[#DFDFE9] text-[#383845] font-semibold text-[15px] py-3 rounded-[0.8rem] transition-colors duration-200">
             View Details
           </button>
