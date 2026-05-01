@@ -35,6 +35,13 @@ const CourseCard = ({ course }) => {
           {/* Author and Rating Row */}
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-3">
+              <Image
+                src={course.instructor_photo}
+                alt={course.instructor}
+                className="w-8 h-8 rounded-full object-cover shadow-sm"
+                width={32}
+                height={32}
+              />
               <span className="text-[14px] font-semibold text-gray-900">
                 {course.instructor}
               </span>

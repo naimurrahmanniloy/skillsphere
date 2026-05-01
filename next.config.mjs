@@ -2,14 +2,9 @@
 const nextConfig = {
   /* config options here */
   images: {
-    remotePatterns: [
-      new URL(
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085/**?w=800",
-      ),
-    ],
+    domains: ["images.unsplash.com", "randomuser.me"],
   },
   reactCompiler: true,
 };
 
 export default nextConfig;
-// https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800
