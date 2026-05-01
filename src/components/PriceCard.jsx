@@ -16,18 +16,15 @@ const PriceCard = ({ currentData }) => {
   ];
   return (
     <div>
-      <div className="w-full max-w-100 bg-white rounded-[2.5rem] border border-gray-100 p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.04)]">
+      <div className="w-full max-w-500 bg-white rounded-[2.5rem] border border-gray-100 p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.04)]">
         {/* Pricing Header */}
         <div className="mb-8">
           <span className="text-gray-400 text-sm font-medium block mb-2">
             Full Access Course
           </span>
           <div className="flex items-baseline gap-3 mb-3">
-            <span className="text-[#1A1B22] text-5xl font-bold">
-              {currentData.price}
-            </span>
-            <span className="text-gray-400 text-xl line-through decoration-2">
-              $299.00
+            <span className="text-[#1A1B22] text-3xl font-bold">
+              ${currentData.price}
             </span>
           </div>
 
@@ -43,17 +40,10 @@ const PriceCard = ({ currentData }) => {
           <button className="w-full bg-[#0052D4] hover:bg-[#0041A8] text-white font-bold py-5 rounded-full transition-all duration-200 text-lg shadow-lg shadow-blue-200 active:scale-[0.98]">
             Enroll Now
           </button>
-
-          <button className="w-full flex items-center justify-center gap-2 text-[#0052D4] font-bold py-2 hover:opacity-70 transition-opacity">
-            <Bookmark size={20} fill="currentColor" />
-            <span>Save for Later</span>
-          </button>
         </div>
 
-        {/* Divider */}
         <div className="h-px bg-gray-50 w-full mb-8" />
 
-        {/* Features List */}
         <div>
           <h4 className="text-gray-400 text-[11px] font-bold uppercase tracking-[0.15em] mb-6">
             This course includes:

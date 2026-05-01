@@ -14,7 +14,7 @@ const CourseDetailsPage = async ({ params }) => {
   console.log(currentData);
 
   return (
-    <div className="flex flex-col md:flex-row justify-between w-10/12 mx-auto mt-20 pb-20">
+    <div className="flex flex-col md:flex-row justify-around w-10/12 mx-auto mt-20 pb-20">
       {/* Details Content starts here  */}
       <div>
         {/* badge section  */}
@@ -62,7 +62,7 @@ const CourseDetailsPage = async ({ params }) => {
           </div>
           {/* instructor section  */}
           <div className="mt-5">
-            <div className="max-w-4xl mx-auto p-4 md:p-6">
+            <div className=" p-4 md:py-10">
               <div className="bg-[#F3F5F9] rounded-[2rem] p-6 md:p-7 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 shadow-sm">
                 <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-[1.5rem] overflow-hidden bg-[#57A6A1] shadow-lg">
                   <Image

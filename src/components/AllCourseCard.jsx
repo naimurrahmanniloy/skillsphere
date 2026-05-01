@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AllCourseCard = ({ course }) => {
@@ -50,9 +51,11 @@ const AllCourseCard = ({ course }) => {
               </span>
             </div>
 
-            <button className="text-[#0052D4] font-bold text-[16px] hover:underline transition-all">
-              View Details
-            </button>
+            <Link href={`/courses/${course.id}`}>
+              <button className="text-[#0052D4] font-bold text-[16px] hover:underline transition-all">
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
