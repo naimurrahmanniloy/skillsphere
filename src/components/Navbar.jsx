@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-5 ">
           <Button variant="none" className="text-[16px]" color="primary">
-            <ArrowRightToSquare className="text-lg" />
+            <ArrowRightToSquare className="h-5 w-5" />
             Login
           </Button>
           <Button className="bg-[#005BC5] text-[16px]">Register</Button>

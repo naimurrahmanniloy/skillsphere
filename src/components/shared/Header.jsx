@@ -2,6 +2,7 @@ import React from "react";
 import heroImg from "../../../public/teaching.png";
 import Image from "next/image";
 import { Button } from "@heroui/react";
+import { CirclePlay } from "@gravity-ui/icons";
 
 const Header = () => {
   return (
@@ -16,7 +17,8 @@ const Header = () => {
 
           <div>
             <h1 className="text-8xl font-bold height-[1.2em]">
-              Upgrade Your Skills Today 🚀
+              Upgrade Your{" "}
+              <span className="italic text-[#005BC5]">Skills Today 🚀</span>
             </h1>
             <p className="py-6 text-[20px] text-gray-600">
               Step into a high-end gallery of knowledge. Learn <br /> from
@@ -30,7 +32,7 @@ const Header = () => {
                 Explore Courses
               </Button>
               <Button className="text-lg py-6 px-8" variant="outline">
-                Watch Outlines
+                <CirclePlay className="h-5 w-5" /> Watch Outlines
               </Button>
             </div>
           </div>
