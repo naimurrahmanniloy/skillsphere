@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import { GraduationCap, LogIn } from "lucide-react"; // Using Lucide for the icons
 import { Button, Form, Input, Link } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
 const SignInPage = () => {
   const router = useRouter();
@@ -76,12 +77,6 @@ const SignInPage = () => {
               <label className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.15em]">
                 Password
               </label>
-              <Link
-                href="#"
-                className="text-[11px] font-bold text-[#0056D2] hover:underline"
-              >
-                Forgot?
-              </Link>
             </div>
             <Input
               required
@@ -120,7 +115,7 @@ const SignInPage = () => {
           variant="flat"
           className="w-full bg-[#F3F5FB] text-gray-800 font-bold h-14 rounded-full hover:bg-[#EAECEF] transition-all flex items-center justify-center gap-3"
         >
-          <LogIn size={18} className="text-gray-600" />
+          <FcGoogle size={18} className="text-gray-600" />
           Google
         </Button>
 

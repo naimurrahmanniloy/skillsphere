@@ -3,6 +3,7 @@ import heroImg from "../../../public/teaching.png";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { CirclePlay } from "@gravity-ui/icons";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -28,15 +29,19 @@ const Header = () => {
               industry experts curated for professional excellence.
             </p>
             <div className="flex gap-4">
-              <Button
-                className="text-lg py-6 px-8 bg-[#005BC5]"
-                variant="primary"
-              >
-                Explore Courses
-              </Button>
-              <Button className="text-lg py-6 px-8" variant="outline">
-                <CirclePlay className="h-5 w-5" /> Watch Outlines
-              </Button>
+              <Link href={"/courses"}>
+                <Button
+                  className="text-lg py-6 px-8 bg-[#005BC5]"
+                  variant="primary"
+                >
+                  Explore Courses
+                </Button>
+              </Link>
+              <Link href={"/courses"}>
+                <Button className="text-lg py-6 px-8" variant="outline">
+                  <CirclePlay className="h-5 w-5" /> Watch Outlines
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

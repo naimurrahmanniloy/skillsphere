@@ -1,7 +1,6 @@
 import CourseCurriculam from "@/components/CourseCurriculam";
 import PriceCard from "@/components/PriceCard";
 import { ClockFill, Persons, StarFill } from "@gravity-ui/icons";
-import { TimeField } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 
@@ -11,7 +10,6 @@ const CourseDetailsPage = async ({ params }) => {
   const allData = await res.json();
 
   const currentData = allData.find((data) => data.id == id);
-  console.log(currentData);
 
   return (
     <div className="flex flex-col md:flex-row justify-around w-10/12 mx-auto mt-20 pb-20">
@@ -35,15 +33,15 @@ const CourseDetailsPage = async ({ params }) => {
           </h1>
           {/* rating section  */}
           <div className="flex gap-5 items-center mt-4">
-            <div className="flex gap-3 items-center font-bold">
+            <div className="flex gap-1 items-center font-bold">
               <StarFill className="text-[gold]" />
               {currentData.rating}
             </div>
-            <div className="flex gap-3 items-center font-bold">
+            <div className="flex gap-1 items-center font-bold">
               <Persons />
               <p>{currentData.enrolled_numbers} Students Enrolled</p>
             </div>
-            <div className="flex gap-3 items-center font-bold">
+            <div className="flex gap-1 items-center font-bold">
               <ClockFill />
               <p>{currentData.duration} total</p>
             </div>

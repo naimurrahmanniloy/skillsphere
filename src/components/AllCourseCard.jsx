@@ -52,7 +52,7 @@ const AllCourseCard = ({ course }) => {
             </div>
 
             <Link href={`/courses/${course.id}`}>
-              <button className="text-[#0052D4] font-bold text-[16px] hover:underline transition-all">
+              <button className="text-[#0052D4] font-bold text-[16px] hover:underline transition-all cursor-pointer">
                 View Details
               </button>
             </Link>

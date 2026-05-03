@@ -1,9 +1,10 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { ArrowRight, LogIn } from "lucide-react"; // Imported LogIn to use as the icon instead of an image
+import { ArrowRight, LogIn } from "lucide-react";
 import { Button, Form, Input } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -60,7 +61,7 @@ const SignUpPage = () => {
               placeholder="Alex Rivera"
               variant="flat"
               required
-              classNames={{
+              className={{
                 inputWrapper: "bg-[#E9EBF3] rounded-xl h-14 px-5 border-none",
                 input: "text-gray-800 placeholder:text-gray-400 font-medium",
               }}
@@ -77,7 +78,7 @@ const SignUpPage = () => {
               placeholder="alex@skillsphere.com"
               variant="flat"
               required
-              classNames={{
+              className={{
                 inputWrapper: "bg-[#E9EBF3] rounded-xl h-14 px-5 border-none",
                 input: "text-gray-800 placeholder:text-gray-400 font-medium",
               }}
@@ -93,7 +94,7 @@ const SignUpPage = () => {
               placeholder="https://images.unsplash.com/your-profile"
               variant="flat"
               required
-              classNames={{
+              className={{
                 inputWrapper: "bg-[#E9EBF3] rounded-xl h-14 px-5 border-none",
                 input: "text-gray-800 placeholder:text-gray-400 font-medium",
               }}
@@ -110,7 +111,7 @@ const SignUpPage = () => {
               placeholder="••••••••"
               variant="flat"
               required
-              classNames={{
+              className={{
                 inputWrapper: "bg-[#E9EBF3] rounded-xl h-14 px-5 border-none",
                 input: "text-gray-800 placeholder:text-gray-400 font-medium",
               }}
@@ -139,7 +140,7 @@ const SignUpPage = () => {
           variant="flat"
           className="w-full bg-[#F3F5FB] text-gray-800 font-bold h-14 rounded-full hover:bg-[#EAECEF] transition-all flex items-center justify-center gap-3"
         >
-          <LogIn size={18} className="text-gray-600" />
+          <FcGoogle size={18} className="text-gray-600" />
           Google
         </Button>
 
