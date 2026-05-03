@@ -5,7 +5,6 @@ import Link from "next/link";
 const Popular = async () => {
   const res = await fetch("https://skillsphere-nu.vercel.app/data.json");
   const data = await res.json();
-  console.log(data);
 
   return (
     <div className=" bg-[#F9F9FF] pt-32 min-h-200">
