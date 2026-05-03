@@ -5,15 +5,22 @@ import LearningSection from "./shared/LearningSection";
 import Mentors from "./shared/Mentors";
 import ReadySection from "./shared/ReadySection";
 import TechSection from "./TechSection";
+import FadeUp from "./Fadeup";
 
 const Homepage = () => {
   return (
     <div>
       <Header />
-      <Popular />
+      <FadeUp delay={0.2}>
+        <Popular />
+      </FadeUp>
       <TechSection />
+
       <LearningSection />
-      <Mentors />
+
+      <FadeUp delay={0.2}>
+        <Mentors />
+      </FadeUp>
       <ReadySection />
     </div>
   );
