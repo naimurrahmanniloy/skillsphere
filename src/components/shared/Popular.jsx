@@ -8,7 +8,7 @@ const Popular = async () => {
   console.log(data);
 
   return (
-    <div className=" bg-[#F2F3FC] pt-32 min-h-200">
+    <div className=" bg-[#F9F9FF] pt-32 min-h-200">
       <div className="max-w-7xl mx-auto  ">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
