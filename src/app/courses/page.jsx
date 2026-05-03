@@ -1,8 +1,29 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import AllCourseCard from "@/components/AllCourseCard";
 
-const Courses = async () => {
-  const res = await fetch("https://skillsphere-nu.vercel.app/data.json");
-  const data = await res.json();
+const Courses = () => {
+  const [courses, setCourses] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await fetch("https://skillsphere-nu.vercel.app/data.json");
+        const data = await res.json();
+        setCourses(data);
+      } catch (error) {
+        console.error("Failed to fetch courses:", error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
+
+  const filteredCourses = courses.filter((course) =>
+    course.title?.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
 
   return (
     <div>
@@ -33,6 +54,8 @@ const Courses = async () => {
               <input
                 type="text"
                 placeholder="e.g. UX Design Principles"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-[#EAEAF2] text-[#1A1B22] placeholder:text-[#B0B2BE] text-sm md:text-base py-4 px-6 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#0052D4]/20 transition-all"
               />
               <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#004282] p-2.5 rounded-lg text-white hover:bg-[#003366] transition-colors">
@@ -53,11 +76,18 @@ const Courses = async () => {
             </div>
           </div>
         </div>
+
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch w-10/12 mx-auto mt-12">
-            {data.map((course) => (
-              <AllCourseCard key={course.id} course={course} />
-            ))}
+            {filteredCourses.length > 0 ? (
+              filteredCourses.map((course) => (
+                <AllCourseCard key={course.id} course={course} />
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12 text-[#5B5E6B]">
+                No courses found matching {searchQuery}
+              </div>
+            )}
           </div>
         </div>
       </section>
