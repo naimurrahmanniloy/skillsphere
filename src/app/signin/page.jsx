@@ -5,6 +5,7 @@ import { GraduationCap, LogIn } from "lucide-react"; // Using Lucide for the ico
 import { Button, Form, Input, Link } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
+import toast from "react-hot-toast";
 
 const SignInPage = () => {
   const router = useRouter();
@@ -23,6 +24,7 @@ const SignInPage = () => {
     if (!error) {
       router.push("/");
     }
+    toast.success("Successfully Sign In!");
   };
   const handleGoogleSignIn = async () => {
     await authClient.signIn.social({
